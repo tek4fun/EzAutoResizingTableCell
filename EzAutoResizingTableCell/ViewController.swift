@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var customTable: UITableView!
     @IBOutlet weak var sizeSlider: UISlider!
     
@@ -23,12 +23,12 @@ class ViewController: UIViewController {
         customTable.rowHeight = UITableViewAutomaticDimension
         customTable.estimatedRowHeight = 100
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     @IBAction func onValueChanged(_ sender: UISlider) {
         customTable.beginUpdates()
         for cell in cellList {
@@ -37,10 +37,6 @@ class ViewController: UIViewController {
         }
         customTable.endUpdates()
     }
-    
-}
-
-extension ViewController: UITableViewDelegate {
     
 }
 
