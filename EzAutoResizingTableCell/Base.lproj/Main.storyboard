@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EzAutoResizingTableCell" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jx9-Hy-wGU">
+                                <rect key="frame" x="0.0" y="20" width="375" height="529"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="17" minValue="13" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="iBa-WE-GuR">
+                                <rect key="frame" x="14" y="617" width="347" height="31"/>
+                                <connections>
+                                    <action selector="onValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="bND-KO-n0I"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31J-cF-arW">
+                                <rect key="frame" x="16" y="591" width="10" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LA5-VH-3ug">
+                                <rect key="frame" x="333" y="562" width="26" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuH-Le-yVj">
+                                <rect key="frame" x="179" y="578" width="17" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jx9-Hy-wGU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="10V-iH-Oek"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LA5-VH-3ug" secondAttribute="trailing" constant="16" id="1yv-wN-ccz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iBa-WE-GuR" secondAttribute="trailing" constant="16" id="8q7-bk-E9V"/>
+                            <constraint firstItem="iBa-WE-GuR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="BQj-jp-nm7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iBa-WE-GuR" secondAttribute="bottom" constant="20" id="H0K-sS-2X2"/>
+                            <constraint firstItem="LA5-VH-3ug" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="Kbb-1Q-0DJ"/>
+                            <constraint firstItem="iBa-WE-GuR" firstAttribute="top" secondItem="31J-cF-arW" secondAttribute="bottom" constant="8" id="SIS-G5-wRF"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="31J-cF-arW" secondAttribute="trailing" constant="20" symbolic="YES" id="T20-qN-fxA"/>
+                            <constraint firstItem="VuH-Le-yVj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tyf-JF-GUR"/>
+                            <constraint firstItem="Jx9-Hy-wGU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XPm-yp-K2N"/>
+                            <constraint firstItem="iBa-WE-GuR" firstAttribute="top" secondItem="Jx9-Hy-wGU" secondAttribute="bottom" constant="68" id="YZa-91-A1x"/>
+                            <constraint firstItem="Jx9-Hy-wGU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="e8Q-rT-Vz0"/>
+                            <constraint firstItem="31J-cF-arW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nXR-8N-J76"/>
+                            <constraint firstItem="iBa-WE-GuR" firstAttribute="top" secondItem="VuH-Le-yVj" secondAttribute="bottom" constant="7" id="ntR-Hw-ktd"/>
+                            <constraint firstItem="iBa-WE-GuR" firstAttribute="top" secondItem="LA5-VH-3ug" secondAttribute="bottom" constant="7" id="pdG-c0-l4U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="customTable" destination="Jx9-Hy-wGU" id="G41-oM-Mfh"/>
+                        <outlet property="sizeSlider" destination="iBa-WE-GuR" id="qxd-ff-krT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
